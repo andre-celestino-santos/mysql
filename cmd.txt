@@ -1,0 +1,12 @@
+users
+select User,Host from mysql.user where User in('root','bank') limit 10;
+
+create user with 172... access
+create user 'bank'@'172.17.0.1' identified by 'bank';
+
+drop user
+drop user 'bank'@'172.17.0.1';
+
+create database bank;
+
+grant select, insert, update, delete, create, drop on bank.* to 'bank'@'172.17.0.1';
